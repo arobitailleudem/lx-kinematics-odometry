@@ -57,8 +57,8 @@ def estimate_pose(
     d_A = (d_left + d_right)/2
     Delta_Theta = (d_right - d_left)/baseline
 
-    d_x= d_A * np.cos(Delta_Theta)
-    d_y= d_A * np.sin( Delta_Theta)
+    d_x= d_A * np.cos(theta_prev+Delta_Theta)
+    d_y= d_A * np.sin(theta_prev+Delta_Theta)
 
 
     x_curr = x_prev + d_x
